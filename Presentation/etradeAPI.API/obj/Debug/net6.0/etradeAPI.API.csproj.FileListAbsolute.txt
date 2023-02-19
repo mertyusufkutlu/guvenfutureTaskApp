@@ -138,3 +138,6 @@ C:\Users\Mert\Desktop\etradeAPI\Presentation\etradeAPI.API\obj\Debug\net6.0\refi
 C:\Users\Mert\Desktop\etradeAPI\Presentation\etradeAPI.API\obj\Debug\net6.0\etradeAPI.API.pdb
 C:\Users\Mert\Desktop\etradeAPI\Presentation\etradeAPI.API\obj\Debug\net6.0\etradeAPI.API.genruntimeconfig.cache
 C:\Users\Mert\Desktop\etradeAPI\Presentation\etradeAPI.API\obj\Debug\net6.0\ref\etradeAPI.API.dll
+C:\Users\Mert\Desktop\etradeAPI\Presentation\etradeAPI.API\bin\Debug\net6.0\MediatR.dll
+C:\Users\Mert\Desktop\etradeAPI\Presentation\etradeAPI.API\bin\Debug\net6.0\MediatR.Contracts.dll
+C:\Users\Mert\Desktop\etradeAPI\Presentation\etradeAPI.API\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll

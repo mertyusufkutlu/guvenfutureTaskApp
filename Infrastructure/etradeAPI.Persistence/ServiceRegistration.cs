@@ -16,7 +16,7 @@ namespace etradeAPI.Persistence
         public static void AddPersistenceServices(this IServiceCollection services)
         {
 
-            services.AddDbContext<etradeAPIDbContext>(options => options.UseNpgsql(Configuration.ConnectionString));
+            services.AddDbContext<etradeAPIDbContext>(options => options.UseSqlServer(Configuration.ConnectionString));
             services.AddScoped<ICustomerReadRepository, CustomerReadRepository>();
             services.AddScoped<ICustomerWriteRepository, CustomerWriteRepository>();
             services.AddScoped<IOrderReadRepository, OrderReadRepository>();
@@ -25,6 +25,8 @@ namespace etradeAPI.Persistence
             services.AddScoped<IProductWriteRepository, ProductWriteRepository>();
             services.AddScoped<IUserReadRepository, UserReadRepository>();
             services.AddScoped<IUserWriteRepository, UserWriteRepository>();
+            services.AddScoped<ICustomerBasketReadRepository, CustomerBasketReadRepository>();
+            services.AddScoped<ICustomerBasketWriteRepository, CustomerBasketWriteRepository>();
 
         }
     }

@@ -12,6 +12,6 @@ namespace etradeAPI.Domain.Entites
         public int Stock { get; set; }
         public float  Price { get; set; }
 
-        public ICollection<Order> Orders { get; set; }
+        public ICollection<Order>? Orders { get; set; }
     }
 }

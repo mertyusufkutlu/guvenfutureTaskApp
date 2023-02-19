@@ -1,5 +1,6 @@
 
 
+using etradeAPI.Applicaton;
 using etradeAPI.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +12,7 @@ policy.WithOrigins("http://localhost:4200", "https://localhost:4200")
     .AllowAnyMethod()
 ));
 
+builder.Services.AddApplicationServices();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

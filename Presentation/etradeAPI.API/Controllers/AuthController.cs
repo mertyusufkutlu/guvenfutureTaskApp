@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
+using System.Net;
 using System.Security.Claims;
 using System.Security.Cryptography;
 
@@ -18,10 +19,12 @@ namespace etradeAPI.API.Controllers
         readonly private IConfiguration _configuration;
         readonly private IUserWriteRepository _userWriteRepository;
 
-        public AuthController(IConfiguration configuration)
+        public AuthController(IConfiguration configuration, IUserWriteRepository userWriteRepository)
         {
             _configuration = configuration;
+            _userWriteRepository = userWriteRepository;
         }
+
         [HttpPost("register")]
         public async Task<ActionResult<User>> Register(UserDto request)
         {
@@ -31,9 +34,15 @@ namespace etradeAPI.API.Controllers
             user.PasswordHash = passwordHash;
             user.PasswordSalt = passwordSalt;
 
-            return Ok(user);
-
-
+            await _userWriteRepository.AddAsync(new()
+            {
+                Id = request.Id,
+                UserName = request.UserName,
+                PasswordHash = passwordHash,
+                PasswordSalt = passwordSalt
+            });
+            await _userWriteRepository.SaveAsync();
+            return StatusCode((int)HttpStatusCode.Created);
         }
 
         [HttpPost("login")]
@@ -43,14 +52,14 @@ namespace etradeAPI.API.Controllers
             {
                 return BadRequest("User not found or Wrong UserName !");
             }
+
             if (!VerifyPasswordHash(request.Passowrd, user.PasswordHash, user.PasswordSalt))
             {
                 return BadRequest("Wrong Passowrd");
             }
+
             string token = CreateToken(user);
             return Ok(token);
-
-
         }
 
         private string CreateToken(User user)
@@ -58,8 +67,6 @@ namespace etradeAPI.API.Controllers
             List<Claim> claims = new List<Claim>
             {
                 new Claim(ClaimTypes.Name, user.UserName)
-
-
             };
 
             var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(
@@ -76,7 +83,6 @@ namespace etradeAPI.API.Controllers
 
             return jwt;
         }
-
 
 
         private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
@@ -98,5 +104,3 @@ namespace etradeAPI.API.Controllers
         }
     }
 }
-
-
