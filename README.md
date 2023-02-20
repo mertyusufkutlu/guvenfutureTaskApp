@@ -7,6 +7,8 @@
 
 - Proje codefirst olup İlk açılışta connection sağlandıktan sonra update-database yapmak yeterli olacaktır.
 
+
+
 ***Verilen task için tüm API'lerin açıklaması aşağıda mevcuttur*** :
 
 
