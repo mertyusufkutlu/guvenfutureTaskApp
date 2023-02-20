@@ -1,6 +1,8 @@
 # Guven Future Mülakat Proje Dokümanı
 
-- #### Kullanılan kütüphaneler :  AutoMapper, Newtonsoft.Json, EntityFrameworkCore, DependencyInjection, JwtBearer
+- #### Kullanılan kütüphaneler :  AutoMapper, Newtonsoft.Json, EntityFrameworkCore, DependencyInjection, JwtBearer, MediatR
+
+- #### Kullanılan Design Patterler :  Onion Architecture, CQRS
 
 
 - Proje çalışmadan önce local veritabanına (MsSql) `etradeAPIDb` adında bir veritabanı oluşturmak veya connectionstring'i kendinize göre düzenlemeniz gerekir.
