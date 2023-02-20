@@ -116,6 +116,9 @@ namespace etradeAPI.Persistence.Migrations
                     b.Property<float>("Price")
                         .HasColumnType("real");
 
+                    b.Property<Guid>("ProductGroupId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<int>("Stock")
                         .HasColumnType("int");
 
@@ -124,7 +127,30 @@ namespace etradeAPI.Persistence.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ProductGroupId");
+
                     b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("etradeAPI.Domain.Entites.ProductGroup", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProductGroup");
                 });
 
             modelBuilder.Entity("etradeAPI.Domain.Entites.User", b =>
@@ -224,6 +250,17 @@ namespace etradeAPI.Persistence.Migrations
                         .IsRequired();
 
                     b.Navigation("Customer");
+                });
+
+            modelBuilder.Entity("etradeAPI.Domain.Entites.Product", b =>
+                {
+                    b.HasOne("etradeAPI.Domain.Entites.ProductGroup", "ProductGroup")
+                        .WithMany()
+                        .HasForeignKey("ProductGroupId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ProductGroup");
                 });
 
             modelBuilder.Entity("OrderProduct", b =>

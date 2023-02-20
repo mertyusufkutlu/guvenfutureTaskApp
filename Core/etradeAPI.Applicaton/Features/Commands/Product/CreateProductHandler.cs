@@ -20,7 +20,8 @@ public class CreateProductHandler : IRequestHandler<CreateProductCommand , List<
         {
             Name = request.Name,
             Price = request.Price,
-            Stock = request.Stock
+            Stock = request.Stock,
+            ProductGroupId = request.ProductGroupId,
         });
         await _productWriteRepository.SaveAsync();
         return new();

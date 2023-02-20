@@ -3,7 +3,9 @@ using etradeAPI.Domain.Entites;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
+using etradeAPI.Applicaton.Features.Queries.CustomerBasket;
 using etradeAPI.Applicaton.ViewModels.CustomerBasket;
+using MediatR;
 
 namespace etradeAPI.API.Controllers;
 
@@ -14,18 +16,20 @@ public class CustomerBasketController : ControllerBase
 {
     readonly private ICustomerBasketReadRepository _customerBasketReadRepository;
     readonly private ICustomerBasketWriteRepository _customerBasketWriteRepository;
+    readonly private IMediator _mediator;
 
     public CustomerBasketController(ICustomerBasketReadRepository customerBasketReadRepository,
-        ICustomerBasketWriteRepository customerBasketWriteRepository)
+        ICustomerBasketWriteRepository customerBasketWriteRepository, IMediator mediator)
     {
         _customerBasketReadRepository = customerBasketReadRepository;
         _customerBasketWriteRepository = customerBasketWriteRepository;
-        
+        _mediator = mediator;
     }
-    [HttpGet]
-    public async Task<IActionResult> Get()
+    [HttpGet("{userId}")]
+    public async Task<IActionResult> GetById(Guid userId)
     {
-        return Ok(_customerBasketReadRepository.GetAll());
+        var response = await _mediator.Send(new GetCustomerBasketByIdQueryRequest { UserId = userId });
+        return Ok(response);
     }
     
     [HttpPost]

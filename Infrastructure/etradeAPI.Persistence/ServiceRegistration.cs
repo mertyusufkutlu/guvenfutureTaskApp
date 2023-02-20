@@ -27,6 +27,8 @@ namespace etradeAPI.Persistence
             services.AddScoped<IUserWriteRepository, UserWriteRepository>();
             services.AddScoped<ICustomerBasketReadRepository, CustomerBasketReadRepository>();
             services.AddScoped<ICustomerBasketWriteRepository, CustomerBasketWriteRepository>();
+            services.AddScoped<IProductGroupWriteRepository, ProductGroupWriteRepository>();
+            services.AddScoped<IProductGroupReadRepository, ProductGroupReadRepository>();
 
         }
     }

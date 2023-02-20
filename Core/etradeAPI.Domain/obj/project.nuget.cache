@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ScL3PpMxOm2KhdZjCO4dj3dCABaYQF84aAHtRKNbG7V/ASjvKe4fNkpRZj0QsLxSTqkniNj+oGyaFJ9Pm/3xLQ==",
+  "dgSpecHash": "JYzjL6ORAwcUkAqsMCioYJb0cbS9eqWUboInw0n4sH4AsQeRBQYT5aV8DEGJ+JxzTF1fqtOW06yt++ku+ewNKQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mert\\Desktop\\etradeAPI\\Core\\etradeAPI.Domain\\etradeAPI.Domain.csproj",
+  "projectFilePath": "C:\\Users\\mert.kutlu\\RiderProjects\\guvenfutureTaskApp\\Core\\etradeAPI.Domain\\etradeAPI.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

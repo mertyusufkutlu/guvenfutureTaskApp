@@ -27,8 +27,8 @@ namespace etradeAPI.API.Controllers
             _productReadRepository = productReadRepository;
             _mediator = mediator;
         }
-        [HttpGet]
-        public async Task<IActionResult> Get()
+        [HttpGet("GetAll")]
+        public async Task<IActionResult> GetAll()
         {
          var response =  await _mediator.Send(new GetAllProductQueryRequest());
          return Ok(response);
@@ -49,10 +49,11 @@ namespace etradeAPI.API.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(string id)
         {
-            await _productWriteRepository.RemoveAsync(id);
-            await _productWriteRepository.SaveAsync();
+            var response =  await _mediator.Send(new DeleteProductCommand{ Id = id});
             return Ok();
         }
+        
+        
 
 
     }

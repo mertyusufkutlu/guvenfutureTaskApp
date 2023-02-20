@@ -22,3 +22,15 @@ C:\Users\Mert\Desktop\etradeAPI\Core\etradeAPI.Domain\obj\Debug\net6.0\etradeAPI
 C:\Users\Mert\Desktop\etradeAPI\Core\etradeAPI.Domain\obj\Debug\net6.0\refint\etradeAPI.Domain.dll
 C:\Users\Mert\Desktop\etradeAPI\Core\etradeAPI.Domain\obj\Debug\net6.0\etradeAPI.Domain.pdb
 C:\Users\Mert\Desktop\etradeAPI\Core\etradeAPI.Domain\obj\Debug\net6.0\ref\etradeAPI.Domain.dll
+C:\Users\mert.kutlu\RiderProjects\guvenfutureTaskApp\Core\etradeAPI.Domain\bin\Debug\net6.0\etradeAPI.Domain.deps.json
+C:\Users\mert.kutlu\RiderProjects\guvenfutureTaskApp\Core\etradeAPI.Domain\bin\Debug\net6.0\etradeAPI.Domain.dll
+C:\Users\mert.kutlu\RiderProjects\guvenfutureTaskApp\Core\etradeAPI.Domain\bin\Debug\net6.0\ref\etradeAPI.Domain.dll
+C:\Users\mert.kutlu\RiderProjects\guvenfutureTaskApp\Core\etradeAPI.Domain\bin\Debug\net6.0\etradeAPI.Domain.pdb
+C:\Users\mert.kutlu\RiderProjects\guvenfutureTaskApp\Core\etradeAPI.Domain\obj\Debug\net6.0\etradeAPI.Domain.csproj.AssemblyReference.cache
+C:\Users\mert.kutlu\RiderProjects\guvenfutureTaskApp\Core\etradeAPI.Domain\obj\Debug\net6.0\etradeAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mert.kutlu\RiderProjects\guvenfutureTaskApp\Core\etradeAPI.Domain\obj\Debug\net6.0\etradeAPI.Domain.AssemblyInfoInputs.cache
+C:\Users\mert.kutlu\RiderProjects\guvenfutureTaskApp\Core\etradeAPI.Domain\obj\Debug\net6.0\etradeAPI.Domain.AssemblyInfo.cs
+C:\Users\mert.kutlu\RiderProjects\guvenfutureTaskApp\Core\etradeAPI.Domain\obj\Debug\net6.0\etradeAPI.Domain.csproj.CoreCompileInputs.cache
+C:\Users\mert.kutlu\RiderProjects\guvenfutureTaskApp\Core\etradeAPI.Domain\obj\Debug\net6.0\etradeAPI.Domain.dll
+C:\Users\mert.kutlu\RiderProjects\guvenfutureTaskApp\Core\etradeAPI.Domain\obj\Debug\net6.0\ref\etradeAPI.Domain.dll
+C:\Users\mert.kutlu\RiderProjects\guvenfutureTaskApp\Core\etradeAPI.Domain\obj\Debug\net6.0\etradeAPI.Domain.pdb
