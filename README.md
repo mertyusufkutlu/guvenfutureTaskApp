@@ -2,7 +2,7 @@
 
 - #### Kullanılan kütüphaneler :  AutoMapper, Newtonsoft.Json, EntityFrameworkCore, DependencyInjection, JwtBearer, MediatR
 
-- #### Kullanılan Design Patterler :  Onion Architecture, CQRS
+- #### Kullanılan Design Patterler :  Onion Architecture, CQRS, Repository Pattern
 
 
 - Proje çalışmadan önce local veritabanına (MsSql) `etradeAPIDb` adında bir veritabanı oluşturmak veya connectionstring'i kendinize göre düzenlemeniz gerekir.
