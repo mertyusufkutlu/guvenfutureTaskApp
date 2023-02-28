@@ -39,7 +39,7 @@
 | `passowrd` | `string` | Kullanıcı şifresi |
 
 #### Açıklama
-- Kullanıcı adı ve şifre doğru ise JWT Bearer token dönecektir
+- Kullanıcı adı ve şifre doğru ise JWT Bearer token üretecektir
 
 
 
