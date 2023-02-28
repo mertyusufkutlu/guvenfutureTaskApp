@@ -5,7 +5,7 @@
 - #### Kullanılan Design Patterler :  Onion Architecture, CQRS, Repository Pattern
 
 
-- Proje çalışmadan önce local veritabanına (MsSql) `etradeAPIDb` adında bir veritabanı oluşturmak veya connectionstring'i kendinize göre düzenlemeniz gerekir.
+- Proje çalışmadan önce local veritabanına (MSSQL) `etradeAPIDb` adında bir veritabanı oluşturmak veya connectionstring'i kendinize göre düzenlemeniz gerekir.
 
 - Proje codefirst olup İlk açılışta connection sağlandıktan sonra update-database yapmak yeterli olacaktır.
 
